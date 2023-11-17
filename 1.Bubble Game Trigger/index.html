@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- bg-[#05254b] -->
+    <div class="w-[100%] h-[100vh] flex flex-col justify-center gap-3 items-center bg-[#fbc5d0]  ">
+        <div onclick="play()" class="text-[20px] play font-bold text-[white] bg-black px-2 rounded-xl cursor-pointer py-2">Game Start</div>
+        <div class=" w-[70%] bg-white rounded-lg shadow-2xl overflow-hidden  h-[80%]">
+            <div class="h-[100px] bg-[#f52e57] w-[100%] flex justify-between px-[150px] items-center">
+                <div class="elem">
+                    <div class="inp ">
+                       <span  class="text-[20px] font-[600] text-white">Hit : </span> 
+                       <span id="hitVal" class="font-[500] bg-white text-[18px] px-3 ">0</span>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="inp">
+                        <span class="text-[20px] font-[600] text-white">Timmer : </span>
+                        <span id="timeVal" class="font-[500] bg-white text-[18px] px-3 ">0</span>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="inp">
+                        <span class="text-[20px] font-[600] text-white">Score : </span>
+                        <span id="scoreVal" class="font-[500] bg-white text-[18px] px-3 "> 0</span>
+                    </div>
+                </div>
+
+            </div>
+            <div id="bottomElem" class="flex justify-center items-center flex">
+               
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

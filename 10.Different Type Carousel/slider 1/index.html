@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Carousel Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1da2bcf95c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-[100%] relative h-[60vh]">
+        <div class="slider hidden relative">
+            <img src="images/img1.jpg" alt="" class="w-[100%] h-[100%] bg-cover">
+            <div class="absolute w-[100%] bottom-0 text-[red] py-2 text-center font-[arial] font-bold text-[27px]">
+                Nature Image 1
+            </div>
+        </div>
+        <div class="slider hidden relative">
+            <img src="images/img2.jpg" alt="" class="w-[100%] h-[100%] bg-cover">
+            <div class="absolute w-[100%] bottom-0 text-[red] py-2 text-center font-[arial] font-bold text-[27px]">
+                Nature Image 2
+            </div>
+        </div>
+        <div class="slider hidden relative">
+            <img src="images/img3.jpg" alt="" class="w-[100%] h-[100%] bg-cover">
+            <div class="absolute w-[100%] bottom-0 text-[red] py-2 text-center font-[arial] font-bold text-[27px]">
+                Nature Image 3
+            </div>
+        </div>
+        <div class="slider hidden relative">
+            <img src="images/img4.jpg" alt="" class="w-[100%] h-[100%] bg-cover">
+            <div class="absolute w-[100%] bottom-0 text-[red] py-2 text-center font-[arial] font-bold text-[27px]">
+                Nature Image 4
+            </div>
+        </div>
+        <div class="slider hidden relative">
+            <img src="images/img5.jpg" alt="" class="w-[100%] h-[100%] bg-cover">
+            <div class="absolute w-[100%] bottom-0 text-[red] py-2 text-center font-[arial] font-bold text-[27px]">
+                Nature Image 5
+            </div>
+        </div>
+        <div class="absolute top-[0] flex items-center px-5 left-0 text-[25px] duration-300 cursor-pointer h-[100%] left-btn"
+            onclick="controller1(-1)">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="absolute top-[0] flex items-center right-0 px-5 text-[25px] duration-300 cursor-pointer h-[100%] right-btn"
+            onclick="controller1(1)">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

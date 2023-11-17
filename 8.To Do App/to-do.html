@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .parent{
+            max-width: 800px;
+            min-height: 600px;
+            box-shadow: 0px 0px 2px blue;
+            margin: 20px auto;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+
+        }
+        .parent input{
+            border: none;
+            outline: none;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0px 0px 2px ;
+            font-size: 25px;
+        }
+        #list-box{
+            list-style: none;
+            margin: 10px 20px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        #list-box li{
+            padding: 10px;
+            background-color: lightcoral;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        #list-box li span{
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <input type="text">
+        <ul id="list-box">
+        </ul>
+    </div>
+    <script>
+        var inp = document.querySelector(".parent input");
+        var listBox = document.querySelector("#list-box");
+
+        inp.addEventListener(
+            "keyup",
+            function (elem){
+                if(elem.key == "Enter"){
+                    var item = elem.target.value;
+                    listBox.innerHTML+= `
+                    <li>${item} <span onclick = "removeData(this)"> X </span> </li>
+                    `
+                    elem.target.value = "";
+                }
+            }
+        )  
+        function removeData(span){
+            span.parentNode.remove();
+            // yaha per remove() remove karwata hai
+            // aur saath yah js ka bana banaya function hai
+
+        }
+    </script>
+</body>
+</html>

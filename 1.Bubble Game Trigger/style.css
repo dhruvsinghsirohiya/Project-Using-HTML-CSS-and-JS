@@ -1,0 +1,13 @@
+#bottomElem{
+    width: 100%;
+    padding: 5px 20px;
+    height: calc(100% - 100px);
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.play{
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.showImg{
+    height: 150px;
+}
+
+.textAnimate{
+    animation-name: textAnim;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes textAnim {
+    0%, 100%{
+        transform: translateX(0px);
+    }
+    25% ,75%{
+        transform: translateX(-4px);
+    }
+    50%{
+        transform: translateX(4px);
+    }
+}

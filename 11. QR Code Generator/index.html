@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="w-[100%] bg-[#352F44] h-[100vh] flex justify-center items-center">
+        <div class="w-[400px] flex flex-col items-center border-2 rounded-lg py-5">
+            <p class="text-center font-[700] text-[20px] text-white pb-3 font-mono">Enter Your Text or URL</p>
+            <input type="text" class=" w-[80%] outline-none py-1 px-2 text-[18px] border" id="qrText">
+            <div class="imgDiv">
+                <img src="" alt="" id="qrImage" class="w-[160px] my-2">
+                <button type="button" onclick="generateQr()" class="border rounded bg-green-600 hover:bg-black hover:text-white duration-500 py-2 px-3 font-[600]">Generate QR Code</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

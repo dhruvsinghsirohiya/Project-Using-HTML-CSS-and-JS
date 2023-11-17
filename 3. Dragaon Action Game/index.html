@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="man.png" type="image/x-icon">
+    <title>The Action Man</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="w-[100%] overflow-hidden relative h-[100%]">
+        <div class="w-[100%] h-[100vh] bg-banner ">
+            <div class="updateScore absolute right-[50px] font-bold top-[20px] duration-700 border-white rounded-md hover:text-black cursor-pointer bg-red-500 text-white drop-shadow-md  border px-5 py-2">
+                Your Score : 0
+            </div>
+            <div
+                class="gameOver absolute font-bold text-center w-[100vw] top-[180px] text-[45px]">
+                Game Over
+                <div class="finalScore text-red-700 ">
+                </div>
+            </div>
+            <div
+                class="startBtn absolute left-[50px] font-bold duration-700 
+                 top-[20px] border-white hover:text-black cursor-pointer 
+                 hover:bg-green-400 rounded-md bg-red-500 text-white drop-shadow-md 
+                  border-2 px-5 disabled py-2"
+                  onclick="gamePlay()"
+                  >Start
+            </div>
+            <div class="man-character w-[90px] h-[90px] absolute left-[50px] bottom-[30px]">
+            </div>
+            <div class="dragaon-character w-[150px] h-[75px] absolute left-[45vw] bottom-6">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>

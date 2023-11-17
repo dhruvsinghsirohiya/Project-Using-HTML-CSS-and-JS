@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        main {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .notes-parent {
+            width: 75%;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .add-parent {
+            width: 15%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .add-parent input {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .notes-box {
+            width: 250px;
+            height: 250px;
+            margin: 30px;
+            box-shadow: 0px 0px 5px black;
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .row {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .row img {
+            width: 24px;
+            height: 24px;
+            padding: 0px 5px;
+            cursor: pointer;
+        }
+
+        .notes-box textarea {
+            outline: none;
+            border: none;
+            width: 245px;
+            height: 215px;
+        }
+        #btn{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="notes-parent">
+            <div class="notes-box">
+                <div class="row">
+                    <img src="icons8-delete.svg" alt="" onclick="removeData(this)">
+                </div>
+                <textarea name="" id="text-area"></textarea>
+            </div>
+        </div>
+        <div class="add-parent">
+            <input type="button" name="" id="btn" value="+ Add Note">
+        </div>
+    </main>
+    <script>
+        var button = document.querySelector("#btn");
+        var notesParent = document.querySelector(".notes-parent");
+        btn.addEventListener(
+            "click",
+            function (elem) {
+                notesParent.innerHTML += `
+                    <div class="notes-box">
+                        <div class="row">
+                            <img src="icons8-save-48.png" alt="">
+                            <img src="icons8-delete.svg" alt="" onclick="removeData(this)">
+                        </div>
+                        <textarea name="" id="text-area"></textarea>
+                    </div>
+                    `
+            }
+        )
+        function removeData(img){
+            img.parentNode.parentNode.remove(this);
+            // yaha per remove() remove karwata hai
+            // aur saath yah js ka bana banaya function hai
+
+        }
+    </script>
+</body>
+
+</html>

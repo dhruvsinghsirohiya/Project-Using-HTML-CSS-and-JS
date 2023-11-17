@@ -1,0 +1,84 @@
+.bg-banner {
+    background-image: url(actionbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.man-character {
+    background-image: url(man.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px blue solid; */
+}
+
+.manCharacterAnimate {
+    animation: mananimate 0.9s linear;
+}
+
+@keyframes mananimate {
+
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 350px;
+    }
+}
+
+.gameOver {
+    visibility: hidden;
+
+}
+
+.dragaon-character {
+    background-image: url(dragaon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px red solid; */
+}
+
+.dragaonCharacterAnimate {
+    animation: dragaonanimate 3s infinite linear;
+}
+
+@keyframes dragaonanimate {
+
+    0% {
+        left: 100vw;
+        bottom: 0;
+    }
+
+    5%,
+    15%,
+    25%,
+    35%,
+    45%,
+    55%,
+    65%,
+    75%,
+    85%,
+    95% {
+        bottom: 80px;
+    }
+
+    10%,
+    20%,
+    30%,
+    40%,
+    50%,
+    60%,
+    70%,
+    80%,
+    90% {
+        bottom: 40px;
+    }
+
+    100% {
+        left: -10vw;
+        bottom: 0;
+    }
+
+
+}

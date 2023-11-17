@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background: black;
+    }
+
+    #res,
+    #dig {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 100px;
+        font-family: 'Zen Dots', cursive;
+        color: darkorange;
+        text-shadow: 0px 0px 5px darkorange;
+    }
+    #res{
+        animation: flash 1s alternate infinite;
+    }
+    @keyframes flash {
+        0%, 100%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+    }
+</style>
+
+<body onload="clock()">
+    <h1 id="dig">Digital Clock</h1>
+    <h1 id="res">00 : 00 : 00 AM</h1>
+    <script>
+        var res = document.querySelector("#res");
+
+        function clock() {
+            var d = new Date();
+
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var phase = "AM";
+
+            if (h > 12) {
+                h = h - 12;
+                phase = "PM";
+            }
+
+            if (h < 10) {
+                h = "0" + h;
+            }
+
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            if (s < 10) {
+                s = "0" + s;
+            }
+
+            res.innerText = `${h} : ${m} : ${s} ${phase}`
+        }
+        setInterval(
+            clock,
+            1000
+        )
+    </script>
+</body>
+
+</html>
